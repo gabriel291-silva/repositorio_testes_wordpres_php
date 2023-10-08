@@ -19,3 +19,12 @@ else :
     echo 'Não foram encontrados posts.';
 endif;
 ?>
+
+<form method="post" action="<?php echo esc_url(admin_url('admin-post.php')); ?>">
+    <input type="hidden" name="action" value="criar_post_personalizado">
+    <label for="titulo">Título:</label>
+    <input type="text" name="titulo" id="titulo" required>
+    <label for="conteudo">Conteúdo:</label>
+    <textarea name="conteudo" id="conteudo" required></textarea>
+    <input type="submit" value="Enviar">
+</form>
